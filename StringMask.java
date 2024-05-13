@@ -15,7 +15,7 @@ public class StringMask {
 			mask_char = "*";
 		}
 		String masked = mask(str, pos, length, mask_char);
-		System.out.println(masked);
+		return masked;
 	}
 	public static String mask(String str, String pos, int length, String mask_char) {
 		System.out.println(str + ' ' + pos + ' ' + length + ' ' + mask_char);
