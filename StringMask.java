@@ -17,7 +17,6 @@ public class StringMask {
 		return mask(str, pos, length, mask_char);
 	}
 	public static String mask(String str, String pos, int length, String mask_char) {
-		System.out.println(str + ' ' + pos + ' ' + length + ' ' + mask_char);
 		String mask = mask_char.repeat(length);
 		String out = ""; String start = ""; String end = "";
 		switch (pos) {
