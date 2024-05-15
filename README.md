@@ -2,10 +2,12 @@
 
 ```java
 
-  String mask = new StringMask('thisusedtobeanemail@gmail.com', 'start', 5, '*'); # 'thisu************************'
-  String mask = new StringMask('thisusedtobeanemail@gmail.com', 'middle', 5); # '************anema************'
-  String mask = new StringMask('thisusedtobeanemail@gmail.com', 'end', 5, '*'); # '************************l.com'
-  String mask = new StringMask('thisusedtobeanemail@gmail.com', 'email', 2); # 'thisusedtobean*****@*****.***'
+	StringMask mask = new StringMask();
+
+	mask.mask("thisusedtobeanemail@gmail.com", "start", 5, "*"); # *****sedtobeanemail@gmail.com
+	mask.mask("thisusedtobeanemail@gmail.com", "middle", 5, "*"); # thisusedtobe*****il@gmail.com
+	mask.mask("thisusedtobeanemail@gmail.com", "end", 5, "*"); # thisusedtobeanemail@gmai*****
+	mask.mask("thisusedtobeanemail@gmail.com", "email", 5, "*"); # thisusedtobean*****@*****.***"
 
 ```
 

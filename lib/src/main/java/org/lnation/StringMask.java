@@ -1,8 +1,10 @@
+package org.lnation.StringMask;
+
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
 public class StringMask {
-	public static void main(String[] args) {
+	public static String main(String[] args) {
 		String str = args[0];
 		String pos; int length; String mask_char;
 		try {
@@ -22,7 +24,7 @@ public class StringMask {
 		switch (pos) {
 			case "email":
 				String[] spl = str.split("@");
-				start = spl[0].substring(length, spl[0].length());
+				start = spl[0].substring(0, spl[0].length() - length);
 				end = Arrays.asList(spl[1].split("\\.")).stream().map(k -> mask_char.repeat(k.length())).collect(Collectors.joining("."));
 				out = start + mask + "@" + end;
 				break;
@@ -38,7 +40,7 @@ public class StringMask {
 				break;
 			default:
 				end = str.substring(length, str.length());
-				out = mask + end;
+				out =  mask + end;
 				break;
 
 		};
